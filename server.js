@@ -44,7 +44,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-// eslint-disable-next-line no-undef
-const PORT = process.env.port || 5000
-
-server.listen(PORT);
+// Listen to port
+const PORT = process.env.PORT || 5000
+server.listen(PORT, () => console.log('Server Running'))
